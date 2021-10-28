@@ -1,4 +1,4 @@
 # host-guest-app
-Create a virutal env and activate it. 
-Move inside the `host-guest-app` dir.
-To start the server, Please run `flask run --reload`.
+1. Create a virutal env and activate it. 
+2. Move inside the `host-guest-app` dir.
+3. To start the server, Please run `flask run --reload`.
