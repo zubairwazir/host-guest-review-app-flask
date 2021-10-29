@@ -1,4 +1,4 @@
-from flask import Flask, request, session
+from flask import Flask, request, session, render_template
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "1c0acd1d7fef474eafc15dee4c6687de"
@@ -8,33 +8,25 @@ app.config["SECRET_KEY"] = "1c0acd1d7fef474eafc15dee4c6687de"
 @app.route("/home")
 @app.route("/index")
 def home():
-    return "Login/Register Template"
+    return render_template("index.html")
 
 
 @app.route("/register", methods=["POST"])
 def register():
-    return "Register Guest/Host"
+    return render_template("register.html")
 
-
-@app.route("/login", methods=["POST"])
+@app.route("/login", methods=["GET", "POST"])
 def login():
-    if request.method == "POST":
-        data = request.get_json(force=True)
-        session["user_type"] = data.get("user_type")
-        return data
-
+    return render_template("login.html")
 
 @app.route("/users")
 def list_users():
     user_type = session.get("user_type")
     return user_type or ""
 
+@app.route("/result")
+def result():
+    return render_template("result.html")
 
-@app.route("/hosts/<host_id>/review", methods=["POST"])
-def post_review_about_host(host_id):
-    return "Post Review About Hosts!"
-
-
-@app.route("/guests/<guest_id>/review", methods=["POST"])
-def post_review_about_guest(guest_id):
-    return "Post Review About Guest!"
+if __name__ == "__main__":
+    app.run(debug=True)
