@@ -2,6 +2,8 @@ guests = [
     {
         "id": "a49b786306f149e997da117f8bd37334",
         "name": "Mark Jones",
+        "password": 123456,
+        "location": "Ukraine",
         "profile_image": "statics/images/mark_jones.jpeg",
         "overall_ratings": 4.8,
         "ratings": [
@@ -25,6 +27,8 @@ guests = [
     {
         "id": "fb0e6fe953b4405db0d0425e3d718814",
         "name": "Adam K.",
+        "location": "Bermingham, United Kingdom",
+        "password": 123456,
         "profile_image": "statics/images/adam.jpeg",
         "overall_ratings": 4.8,
         "ratings": [
