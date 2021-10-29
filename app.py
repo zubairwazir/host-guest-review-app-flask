@@ -13,6 +13,12 @@ app.config["SECRET_KEY"] = "1c0acd1d7fef474eafc15dee4c6687de"
 @app.route("/home")
 @app.route("/index")
 def home():
+    if session.get("user_id"):
+        user_type = session.get("user_type")
+        if user_type == "guest":
+            return render_template("host.html", hosts=hosts)
+        elif user_type == "host":
+            return render_template("guest.html", guests=guests)
     return render_template("index.html")
 
 
@@ -50,7 +56,9 @@ def register():
             "username": request.form.get("username"),
             "name": request.form.get("name"),
             "password": request.form.get("password"),
-            "location": request.form.get("location")
+            "location": request.form.get("location"),
+            "rating": [],
+            "overall_ratings": None
         }
 
         user_type = request.form.get("user_type")
@@ -77,7 +85,6 @@ def login():
     session.clear()
 
     if request.method == "POST":
-        print(request.form)
         if not request.form.get("username"):
             return render_template("error.html", message="must provide username")
 
@@ -116,12 +123,6 @@ def logout():
 
     # Redirect user to login form
     return redirect("/login")
-
-
-@app.route("/users")
-def list_users():
-    user_type = session.get("user_type")
-    return user_type or ""
 
 
 @app.route("/result")

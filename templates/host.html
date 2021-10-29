@@ -1,32 +1,29 @@
 {% extends "layout.html" %}
 
-{% block title %}
-    {{hostInfo[0]['title']}}
-{% endblock %}
+{#{% block title %}#}
+{#    {{ hostInfo[0]['title'] }}#}
+{#{% endblock %}#}
 
 {% block content %}
+    {% for host in hosts %}
+        <div class="row host-container">
+            <div class="col-sm-4">
+                <img src="{{ host["profile_image"] }}" width="130px">
+            </div>
+            <div class="col-sm-4">
+                <h5>Name: {{ host['name'] }}</h5>
+                <h5>Username: {{ host['username'] }}</h5>
+                <h5>Location: {{ host['location'] }}</h5>
+                <h5>Services: {{ host['services'] }}</h5>
+            </div>
 
-    <div class="row host-container">
-        <div class="col-sm-4">
-            <img src="http://covers.openlibrary.org/b/isbn/{{hostInfo[0]['isbn']}}-M.jpg" width="130px">    
+            <!-- REVIEWS -->
+            <div class="col-sm-4">
+                <img class="mb-3" src="../static/goodreads.jpg" alt="host" width="200" height="45">
+                <h5>Overall Rating: {{ host["overall_ratings"] }}</h5>
+            </div>
         </div>
-        <div class="col-sm-4">
-            <h1>{{hostInfo[0]['title']}}</h1>
-            <h5>Name: {{hostInfo[0]['name']}}</h5>
-            <h5>Location: {{hostInfo[0]['location']}}</h5>
-            <h5>Services: {{hostInfo[0]['services']}}</h5>
-        </div>
-
-        <!-- REVIEWS -->
-        <div class="col-sm-4">
-            <img class="mb-3" src="../static/goodreads.jpg" alt="host" width="200" height="45">
-            <h5>No of Ratings: {{hostInfo[1]['work_ratings_count']}}</h5>
-            <h5>Average Rating: {{hostInfo[1]['average_rating']}}</h5>
-            <h5>
-                <a href="https://www.goodreads.com/search?q={{hostInfo[0]['title']}}">Host page</a>
-            </h5>
-        </div>
-    </div>
+    {% endfor %}
     <div class="dropdown-divider"></div>
 
     <h4 class="alert alert-warning">Users Reviews</h4>
@@ -64,17 +61,17 @@
         <div id="userReviews">
             <h2></h2>
             {% for review in reviews %}
-            <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h6 class="mb-1" style="color:burlywood">{{review['username']}} said...</h6>
-                        <small>{{review['time']}}</small>
-                    </div>
-                    <p class="mb-1">{{review['comment']}}</p>
-                    <small>Rated: {{review['rating']}}</small>
-                </a>
-                <div class="dropdown-divider"></div>
-            </div>
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h6 class="mb-1" style="color:burlywood">{{ review['username'] }} said...</h6>
+                            <small>{{ review['time'] }}</small>
+                        </div>
+                        <p class="mb-1">{{ review['comment'] }}</p>
+                        <small>Rated: {{ review['rating'] }}</small>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                </div>
             {% endfor %}
         </div>
     </div>

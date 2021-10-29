@@ -28,6 +28,34 @@ hosts = [
         "overall_rating": 4.9
     },
     {
+        "id": "dc18d3c7b6784c8db1964f5f85896609",
+        "name": "syed",
+        "username": "syed",
+        "password": "12345",
+        "location": "Jeddah, SA",
+        "profile_image": "statics/images/syed.jpeg",
+        "services": ["Free Hosting in Home", "Tour Guide", "City Tours", "Car Pick Up"],
+        "ratings": [
+            {
+                "tag": "City Tours",
+                "points": 4.9
+            },
+            {
+                "tag": "Free Hosting in Home",
+                "points": 4.9
+            },
+            {
+                "tag": "Car Pick Up",
+                "points": 4.6
+            },
+            {
+                "tag": "Tour Guide",
+                "points": 4.8
+            }
+        ],
+        "overall_rating": 4.9
+    },
+    {
         "id": "afc27b8c466e49beaaf4cf1fbe81de80",
         "name": "Karim",
         "username": "karim",
