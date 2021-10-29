@@ -1,26 +1,25 @@
 {% extends "layout.html" %}
 
-{% block title %}
-    {{guestInfo[0]['title']}}
-{% endblock %}
-
 {% block content %}
 
-    <div class="row guest-container">
-        <div class="col-sm-4">
-            <img src="http://covers.openlibrary.org/b/isbn/{{guestInfo[0]['isbn']}}-M.jpg" width="130px">    
-        </div>
-        <div class="col-sm-4">
-            <h1>{{guestInfo[0]['title']}}</h1>
-            <h5>Name: {{guestInfo[0]['name']}}</h5>
-            <h5>Location: {{guestInfo[0]['location']}}</h5>
-        </div>
+{% for guest in guests %}
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{ guest['profile_image'] }}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{ guest['name'] }}</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{ guest['username'] }}</li>
+      <li class="list-group-item">{{ guest['location'] }}</li>
+      <li class="list-group-item">{{ guest["overall_ratings"] }}</li>
+    </ul>
+    <div class="list-group-item">
+      <a href="#" class="card-link">Review</a>
+    </div>
+  </div>
+  {% endfor %}
 
-        <!-- REVIEWS -->
-        <div class="col-sm-4">
-            <img class="mb-3" src="../static/goodreads.jpg" alt="guest" width="200" height="45">
-            <h5>No of Ratings: {{guestInfo[1]['work_ratings_count']}}</h5>
-            <h5>Average Rating: {{guestInfo[1]['average_rating']}}</h5>
             <h5>
                 <a href="https://www.goodreads.com/search?q={{guestInfo[0]['title']}}">Guest page</a>
             </h5>

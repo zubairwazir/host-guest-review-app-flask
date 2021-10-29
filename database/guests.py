@@ -5,7 +5,7 @@ guests = [
         "password": "123456",
         "username": "mark_jones",
         "location": "Ukraine",
-        "profile_image": "statics/images/mark_jones.jpeg",
+        "profile_image": "../static/images/mark_jones.jpg",
         "overall_ratings": 4.8,
         "ratings": [
             {
@@ -31,8 +31,8 @@ guests = [
         "password": "12345",
         "username": "zubair",
         "location": "Ukraine",
-        "profile_image": "statics/images/zubair.jpeg",
-        "overall_ratings": 4.8,
+        "profile_image": "../static/images/zubair.jpg",
+        "overall_ratings": 4.9,
         "ratings": [
             {
                 "tag": "Volunteering Hours",
@@ -57,8 +57,8 @@ guests = [
         "location": "Bermingham, United Kingdom",
         "password": "123456",
         "username": "adam_k",
-        "profile_image": "statics/images/adam.jpeg",
-        "overall_ratings": 4.8,
+        "profile_image": "../static/images/adam.jpg",
+        "overall_ratings": 4.7,
         "ratings": [
             {
                 "tag": "Positive Arab Culture",
