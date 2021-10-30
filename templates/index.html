@@ -5,12 +5,20 @@
 {% endblock %}
 
 {% block content %}
-    <h3>Search Arab Alkaram!</h3>
-    <form action="/search" method="GET">
-        <div class="form-group">
-            <input type="text" class="form-control" name="book" autofocus aria-describedby="bookHelp" placeholder="ISBN, Title or Author">
-            <small id="bookHelp" class="form-text text-muted">Example: 0375508325, Cosmos or Carl Sagan</small>
+    <div class="home-page" style="margin: 12rem auto;">
+        <div class="row">
+            <div class="red col-md-2">
+
+            </div>
+            <div class="col-md-9 display-4">
+                <p class="green">Your UAE visit is on us</p>
+                <p class="white">You are our precious guest</p>
+                <p class="black">Come to the most tolerant and happiest country in the world</p>
+            </div>
         </div>
-        <button class="btn btn-primary" type="submit">Search</button>
-    </form>
+        <div class="buttons">
+            <a href="/register" class="btn btn-success">Register</a>
+            <a href="/login" class="btn btn-warning">Login</a>
+        </div>
+    </div>
 {% endblock %}

@@ -5,24 +5,24 @@ guests = [
         "password": "123456",
         "username": "mark_jones",
         "location": "Ukraine",
-        "profile_image": "../static/images/mark_jones.jpg",
         "overall_ratings": 4.8,
+        "services": ["sustainable behavior toward the environment", "Testimonials about Arabic ethics"],
         "ratings": [
             {
-                "tag": "Volunteering Hours",
-                "hours_count": 50,
-                "points": 4.3
+                "rating": 4,
+                "comment": "Amazing.",
+                "time": "2021-10-30"
             },
             {
-                "tag": "Positive Arab Culture",
-                "stories_count": 3,
-                "points": 4.9
+                "rating": 2,
+                "comment": "Well Done.",
+                "time": "2021-10-30"
             },
             {
-                "tag": "Refer new Tourist",
-                "referral_counts": 4,
-                "points": 4.8
-            }
+                "rating": 5,
+                "comment": "Amazing!@@@@",
+                "time": "2021-10-30"
+            },
         ]
     },
     {
@@ -31,24 +31,30 @@ guests = [
         "password": "12345",
         "username": "zubair",
         "location": "Ukraine",
-        "profile_image": "../static/images/zubair.jpg",
         "overall_ratings": 4.9,
+        "services": [
+            "sustainable behavior toward the environment",
+            "Testimonials about Arabic ethics",
+            "referrals of new tourists",
+            "volunteers to the UAE"
+        ],
+        "description": "A very humble person.",
         "ratings": [
             {
-                "tag": "Volunteering Hours",
-                "hours_count": 50,
-                "points": 4.3
+                "rating": 4,
+                "comment": "Amazing.",
+                "time": "2021-10-30"
             },
             {
-                "tag": "Positive Arab Culture",
-                "stories_count": 3,
-                "points": 4.9
+                "rating": 2,
+                "comment": "Well Done.",
+                "time": "2021-10-30"
             },
             {
-                "tag": "Refer new Tourist",
-                "referral_counts": 4,
-                "points": 4.8
-            }
+                "rating": 5,
+                "comment": "Amazing!@@@@",
+                "time": "2021-10-30"
+            },
         ]
     },
     {
@@ -57,19 +63,29 @@ guests = [
         "location": "Bermingham, United Kingdom",
         "password": "123456",
         "username": "adam_k",
-        "profile_image": "../static/images/adam.jpg",
+        "description": "Traveled Half the World! Love arab culture the most.",
         "overall_ratings": 4.7,
+        "services": [
+            "sustainable behavior toward the environment",
+            "Testimonials about Arabic ethics",
+            "referrals of new tourists"
+        ],
         "ratings": [
             {
-                "tag": "Positive Arab Culture",
-                "stories_count": 3,
-                "points": 4.9
+                "rating": 4,
+                "comment": "Amazing.",
+                "time": "2021-10-30"
             },
             {
-                "tag": "Refer new Tourist",
-                "referral_counts": 4,
-                "points": 4.7
-            }
+                "rating": 2,
+                "comment": "Well Done.",
+                "time": "2021-10-30"
+            },
+            {
+                "rating": 5,
+                "comment": "Amazing!@@@@",
+                "time": "2021-10-30"
+            },
         ]
     }
 ]

@@ -4,27 +4,26 @@ hosts = [
         "name": "Abdullah",
         "username": "abdullah",
         "password": "123456",
-        "location": "Jeddah, SA",
-        "profile_image": "../static/images/abdullah.jpg",
-        "services": ["Free Hosting in Home", "Tour Guide", "City Tours", "Car Pick Up"],
+        "tag": "Arabic Member",
+        "location": "Dubai, UAE",
+        "services": ["Free Hosting in Home", "Tour Guide", "Car Pick Up", "Parties", "any other generosity"],
         "overall_ratings": 4.9,
         "ratings": [
             {
-                "tag": "City Tours",
-                "points": 4.9
+                "rating": 4,
+                "comment": "Amazing.",
+                "time": "2021-10-30"
             },
             {
-                "tag": "Free Hosting in Home",
-                "points": 4.9
+                "rating": 2,
+                "comment": "Well Done.",
+                "time": "2021-10-30"
             },
             {
-                "tag": "Car Pick Up",
-                "points": 4.6
+                "rating": 5,
+                "comment": "Amazing!@@@@",
+                "time": "2021-10-30"
             },
-            {
-                "tag": "Tour Guide",
-                "points": 4.8
-            }
         ]
     },
     {
@@ -32,48 +31,53 @@ hosts = [
         "name": "syed",
         "username": "syed",
         "password": "12345",
-        "location": "Jeddah, SA",
-        "profile_image": "../static/images/sayed.jpg",
-        "services": ["Free Hosting in Home", "Tour Guide", "City Tours", "Car Pick Up"],
+        "location": "Sharja, UAE",
+        "tag": "Arabic Member",
+        "services": ["Free Hosting in Home", "Tour Guide", "Air Plane Ticket", "Car Pick Up"],
         "overall_ratings": 4.8,
         "ratings": [
             {
-                "tag": "City Tours",
-                "points": 4.9
+                "rating": 4,
+                "comment": "Amazing.",
+                "time": "2021-10-30"
             },
             {
-                "tag": "Free Hosting in Home",
-                "points": 4.9
+                "rating": 2,
+                "comment": "Well Done.",
+                "time": "2021-10-30"
             },
             {
-                "tag": "Car Pick Up",
-                "points": 4.6
+                "rating": 5,
+                "comment": "Amazing!@@@@",
+                "time": "2021-10-30"
             },
-            {
-                "tag": "Tour Guide",
-                "points": 4.8
-            }
         ]
     },
     {
         "id": "afc27b8c466e49beaaf4cf1fbe81de80",
         "name": "Karim",
         "username": "karim",
+        "tag": "Arabic Member",
         "password": "123456",
         "location": "Dubai, UAE",
-        "profile_image": "../static/images/karim.jpg",
-        "services": ["Tour Guide", "City Tours"],
+        "services": ["Car Pick Up", "Tour Guide", "Air Plane Ticket", "BBQ", "any other generosity"],
         "overall_ratings": 4.7,
         "ratings": [
             {
-                "tag": "City Tours",
-                "points": 4.9
+                "rating": 4,
+                "comment": "Amazing.",
+                "time": "2021-10-30"
             },
-
             {
-                "tag": "Tour Guide",
-                "points": 4.8
-            }
+                "rating": 2,
+                "comment": "Well Done.",
+                "time": "2021-10-30"
+            },
+            {
+                "rating": 5,
+                "comment": "Amazing!@@@@",
+                "time": "2021-10-30"
+            },
         ]
     }
 ]

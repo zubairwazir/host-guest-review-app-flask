@@ -1,4 +1,6 @@
 import uuid
+from datetime import date
+from functools import reduce
 
 from flask import Flask, session, render_template, request, redirect, flash
 
@@ -13,12 +15,16 @@ app.config["SECRET_KEY"] = "1c0acd1d7fef474eafc15dee4c6687de"
 @app.route("/home")
 @app.route("/index")
 def home():
+    trusted_guest = reduce(lambda x, y: x if x["overall_ratings"] > y["overall_ratings"] else y,
+                           [usr for usr in guests])
+    generous_arab = reduce(lambda x, y: x if x["overall_ratings"] > y["overall_ratings"] else y,
+                       [usr for usr in hosts])
     if session.get("user_id"):
         user_type = session.get("user_type")
         if user_type == "guest":
-            return render_template("host.html", hosts=hosts)
+            return render_template("host.html", hosts=hosts, generous_arab=generous_arab)
         elif user_type == "host":
-            return render_template("guest.html", guests=guests)
+            return render_template("guest.html", guests=guests, trusted_guest=trusted_guest)
     return render_template("index.html")
 
 
@@ -125,9 +131,20 @@ def logout():
     return redirect("/login")
 
 
-@app.route("/result")
-def result():
-    return render_template("result.html")
+@app.route("/review/<user_id>", methods=["GET", "POST"])
+def review(user_id):
+    total_users = guests[:]
+    total_users.extend(hosts)
+    user = [usr for usr in total_users if usr["id"] == user_id][0]
+    if request.method == "POST":
+        rating = request.form.get("rating")
+        comment = request.form.get("comment")
+        user["ratings"].append({
+            "rating": rating,
+            "comment": comment,
+            "time": str(date.today())
+        })
+    return render_template("review.html", user=user)
 
 
 if __name__ == "__main__":

@@ -1,83 +1,40 @@
-/* main .form-control
-{ */
-    /* center form controls */
-    /* display: inline-block; */
-
-    /* override Bootstrap's 100% width for form controls */
-    /* width: auto;
-} */
-
-/* .card-body {
-    text-align: start;
-}
-
-.results-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: baseline;
-} */
-
-/* .book-container {
-    display: flex;
-    justify-content: center;
-}
-
-.form-border {
-    border-color: #ECDB88;
-    border-style: solid;
-    border-radius: 1rem;
-    padding: 0.5rem;
-}
-
-main
-{ */
-    /* scroll horizontally as needed */
-    /* overflow-x: auto; */
-
-    /* center contents */
-    /* text-align: center;
-} */
-
-/* main img
-{ */
-    /* constrain images on small screens */
-    /* max-width: 100%;
-} */
 * {
     box-sizing: border-box;
-  }
-  /* Float four columns side by side */
-.column {
-    float: left;
-    width: 25%;
-    padding: 0 10px;
-  }
-
-  /* Remove extra left and right margins, due to padding */
-.row {margin: 0 -5px;}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
-/* Responsive columns */
-@media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-      display: block;
-      margin-bottom: 20px;
-    }
-  }
-  
-  /* Style the counter cards */
-  .card {
+/* Float four columns side by side */
+.card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 16px;
+    margin: 0 auto;
     text-align: center;
     background-color: #f1f1f1;
-  }
+}
+
+.home-page {
+}
+
+.green {
+    background: #009739;
+}
+
+.white {
+    background: white;
+}
+
+.black {
+    background: black;
+    color: white;
+}
+
+.red {
+    background: #EF3340;
+    height: 18.8rem;
+    position: relative;
+    left: 15px;
+}
+
+.buttons {
+    display: flex;
+    align-items: space-between;
+}
